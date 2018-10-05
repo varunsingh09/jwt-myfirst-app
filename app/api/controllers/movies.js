@@ -19,7 +19,7 @@ module.exports = {
 		movieModel.find({}, function (err, movies) {
 			if (err) {
 				next(err);
-			} else {
+			} else {console.log(movies);
 				for (let movie of movies) {
 					moviesList.push({ id: movie._id, name: movie.name, released_on: movie.released_on });
 				}
